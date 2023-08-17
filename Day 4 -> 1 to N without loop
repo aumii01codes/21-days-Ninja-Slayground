@@ -1,0 +1,21 @@
+import java.util.*;
+public class Solution{
+    public static int[] printNos(int x){
+        int a=1;
+        int [] A=new int[x];
+        int i=0;
+        while (a<=x){
+            A[i]=a;
+            a++;
+            i++;
+        }
+        return A;
+    }
+
+    public static void main(String[] args) {
+        Scanner read= new Scanner(System.in);
+        int n= read.nextInt();
+        read.close();
+        System.out.println(printNos(n));
+    }
+}
