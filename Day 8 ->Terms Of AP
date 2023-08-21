@@ -1,0 +1,27 @@
+import java.util.*;
+public class Solution {
+    public static int[] termsOfAP(int x){
+        int [] A=new int[x];
+        int n=1, j=0, seq;
+        while(j<x){
+            seq=(3*n)+2;
+            if (seq%4!=0){
+                A[j]=seq;
+                j++;
+            }
+            n++;
+        }
+        return A;
+    }
+
+    public static void main(String[] args) {
+        Scanner read= new Scanner(System.in);
+        int t= read.nextInt();
+        for(int i=0; i<t; i++){
+            int a= read.nextInt();
+            System.out.print(termsOfAP(a)+ " ");
+        }
+        System.out.print("\n");
+        read.close();
+    }
+}
