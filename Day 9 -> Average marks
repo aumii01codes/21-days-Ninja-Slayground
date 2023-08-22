@@ -1,0 +1,36 @@
+import java.util.* ;
+import java.io.*;
+/*
+class Pair{
+    char firstLetterOfName;
+    int avgMarks;
+    Pair(char firstLetterOfName, int avgMarks){
+        this.firstLetterOfName = firstLetterOfName;
+        this.avgMarks = avgMarks;
+    }
+}
+*/
+
+public class Solution {
+	public static Pair averageMarks(char firstLetterOfName, int m1, int m2, int m3) {
+		// Write your code here.
+        int avgMarks= (m1 + m2 + m3)/3;
+        return new Pair(firstLetterOfName, avgMarks);
+	}
+
+    public static void main(String[] args) {
+		Scanner read= new Scanner(System.in);
+        int t= read.nextInt();
+        Pair[] pairs = new Pair[t];
+        for(int i=0; i<t; i++){
+            char name= read.next().charAt(0);
+            int a= read.nextInt();
+            int b= read.nextInt();
+            int c= read.nextInt();
+            Pair pair= averageMarks(name, a, b, c);
+            pairs[i]= pair;
+            System.out.println(pairs[i]);
+        }
+        read.close();
+	}
+}
