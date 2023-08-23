@@ -1,0 +1,20 @@
+import java.util.* ;
+public class Solution {
+    public static int findCase(char ch) {
+    int i= ch;
+    if(i>=65 && i<=90) return 1;
+    else if(i>=97 && i<=122) return 0;
+    else return -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner read= new Scanner(System.in);
+        int t= read.nextInt();
+        for(int j=0; j<t; j++){
+            char n= read.next().charAt(0);
+            int a= read.nextInt();
+            System.out.println(findCase(n));
+        }
+        read.close();
+    }
+}
