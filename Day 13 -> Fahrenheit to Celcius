@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*; 
+public class Solution{
+	public static List<List<Integer>> fahrenheitToCelsius(int s, int e, int w) {//START, END, SIZE
+		List<List<Integer>> final_list= new ArrayList<>();
+		while (s<=e){
+			int temp_cel=((s-32)*5)/9;
+			List<Integer> ini_list= new ArrayList<>();
+			ini_list.add(s); //temperature in farhenheit
+			ini_list.add(temp_cel); //temperature in celcius
+			final_list.add(ini_list);
+			s += w; //increasing farhenheit temp by step size
+		}
+		return final_list;
+	}
+}
